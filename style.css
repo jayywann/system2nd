@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: #fff;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  /* LEFT SIDE */
+  .left-panel {
+    flex: 1;
+    background: linear-gradient(180deg, #0575E6 0%, #02298A 85%, #021B79 100%);
+    color: white;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 98px;
+    height: 98px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+  }
+  
+  .title-text {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+  /* RIGHT SIDE */
+  .right-panel {
+    flex: 1;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9f9f9;
+  }
+  
+  .heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .subheading {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  /* INPUT FIELDS */
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 399px;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid #eee;
+    padding: 0 20px 0 50px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+  }
+  
+  /* BUTTON */
+  .login-button {
+    width: 100%;
+    max-width: 399px;
+    height: 60px;
+    background: #0575E6;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left-panel, .right-panel {
+      width: 100%;
+      height: 50vh;
+    }
+  
+    .left-panel {
+      justify-content: center;
+    }
+  
+    .right-panel {
+      padding: 40px;
+    }
+    .signup-link {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #333;
+        font-weight: 400;
+      }
+      
+      .signup-link a {
+        color: #0575E6;
+        font-weight: 600;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      
+      .signup-link a:hover {
+        text-decoration: underline;
+      }
+      
+  }
+  
