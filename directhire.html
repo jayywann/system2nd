@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direct Hire Dashboard</title>
+    <link rel="stylesheet" href="directhire.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <h2>DMW System</h2>
+        <a href="homepage.html">Home</a>
+        <a href="directhire.html">Direct Hire</a>
+        <a href="#">Balik-Manggagawa</a>
+        <a href="#">Government to Government</a>
+        <a href="#">Information Sheet</a>
+        <a href="#">Job Fair</a>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header>
+          <h1 class="main-heading">Direct Hire</h1>
+          <h2 class="dept-heading">Department of Migrant Workers</h2>
+          <p class="sub-heading">Republic of the Philippines</p>
+        </header>
+
+        <section class="requirement-section">
+          <h3 class="section-title">Checklist of Requirements</h3>
+          <ul class="requirement-list">
+            <li>Clearance</li>
+            <li>Memorandum</li>
+            <li>Screenshots (Principal / Email / Consulate)</li>
+            <li>Migrant Workers Office / Embassy / Consulate Confirmation</li>
+          </ul>
+        </section>
+
+        <section class="table-section">
+          <div class="table-wrapper">
+            <table class="status-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Jobsite</th>
+                  <th>Status</th>
+                  <th>For Confirmation<br>(MWO/PE/PCS)</th>
+                  <th>Email to DHAD</th>
+                  <th>Received from DHAD</th>
+                  <th>Evaluator</th>
+                  <th>Note</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Juan Dela Cruz</td>
+                  <td>Saudi Arabia</td>
+                  <td class="active-status">Active</td>
+                  <td>Yes</td>
+                  <td>Sent</td>
+                  <td>Yes</td>
+                  <td><button class="evaluator-btn">Evaluate</button></td>
+                  <td>Cleared</td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Marne Imba PArkour </td>
+                  <td>UAE</td>
+                  <td class="inactive-status">Inactive</td>
+                  <td>No</td>
+                  <td>Pending</td>
+                  <td>No</td>
+                  <td><button class="evaluator-btn">Evaluate</button></td>
+                  <td>Incomplete docs</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer>
+          <button class="print-btn">Print</button>
+          <p class="note-label">Note: Email to DHAD once completed.</p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
+<script>
+    lucide.createIcons();
+  </script>
+  
