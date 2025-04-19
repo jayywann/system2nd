@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balik Manggagawa</title>
+    <style>
+      body {
+        font-family: Poppins, sans-serif;
+        margin: 40px;
+        background-color: #f9f9f9;
+        color: #36384e;
+      }
+      h1 {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 40px;
+        margin-bottom: 10px;
+      }
+      h2,
+      h3 {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-bottom: 8px;
+      }
+      p,
+      span,
+      label,
+      select,
+      option,
+      td,
+      th {
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .label-title {
+        font-weight: 600;
+        color: #3c65fe;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      .dropdown-label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #545f71;
+      }
+      .dropdown {
+        font-size: 16px;
+        font-weight: 400;
+        color: #545f71;
+        padding: 8px;
+        margin: 8px 0;
+      }
+      .section {
+        margin: 24px 0;
+      }
+      .nav-item {
+        font-size: 12px;
+        font-weight: 600;
+        font-family: Inter, sans-serif;
+        color: #1f2633;
+        margin-right: 16px;
+      }
+      .sidebar-title {
+        font-size: 12px;
+        font-weight: 700;
+        color: #98a2b2;
+        font-family: Inter, sans-serif;
+      }
+      .print-button {
+        background-color: #3c65fe;
+        color: white;
+        font-size: 14px;
+        font-family: Poppins, sans-serif;
+        font-weight: 400;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        margin-top: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 24px;
+      }
+      th,
+      td {
+        padding: 12px;
+        border: 1px solid #ccc;
+      }
+      th {
+        background-color: #1e3a8a;
+        color: white;
+        font-weight: 600;
+      }
+      .bold-col {
+        font-weight: 500;
+        color: #101828;
+      }
+      .regular-col {
+        font-weight: 400;
+        color: #667085;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Republic of the Philippines</h3>
+    <h2>Department of Migrant Workers</h2>
+    <div class="section">
+      <h1>Balik Manggagawa</h1>
+      <p class="dropdown-label">Select the location</p>
+      <label for="location" class="dropdown-label">Location</label>
+      <select id="location" class="dropdown">
+        <option>Calamba</option>
+        <option>One stop shop Service Office (OSSCO) Cavite</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <p class="sidebar-title">DASHBOARDS</p>
+      <nav>
+        <span class="nav-item">Direct Hire</span>
+        <span class="nav-item">Balik-Manggagawa</span>
+        <span class="nav-item">Goverment to goverment</span>
+        <span class="nav-item">Information Sheet</span>
+        <span class="nav-item">Job fair</span>
+        <span class="nav-item">Home Page</span>
+      </nav>
+    </div>
+
+    <div class="section">
+      <p class="label-title">PRINT SELECTED PRINTABLES</p>
+      <button class="print-button">Print</button>
+    </div>
+
+    <div class="section">
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th class="bold-col">Last Name</th>
+            <th class="bold-col">Given Name</th>
+            <th class="bold-col">Middle Name</th>
+            <th class="bold-col">Sex</th>
+            <th class="bold-col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td class="regular-col">Dela Cruz</td>
+            <td class="regular-col">Juan</td>
+            <td class="regular-col">Reyes</td>
+            <td class="regular-col">Male</td>
+            <td class="regular-col">Calamba, Laguna</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td class="regular-col">Garcia</td>
+            <td class="regular-col">Maria</td>
+            <td class="regular-col">Lopez</td>
+            <td class="regular-col">Female</td>
+            <td class="regular-col">Imus, Cavite</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

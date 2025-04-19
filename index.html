@@ -33,12 +33,22 @@
 
         <div class="input-wrapper">
           <i class="fas fa-user icon"></i>
-          <input type="text" id="username" placeholder="Username" class="input-field" />
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            class="input-field"
+          />
         </div>
 
         <div class="input-wrapper">
           <i class="fas fa-lock icon"></i>
-          <input type="password" id="password" placeholder="Password" class="input-field" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            class="input-field"
+          />
         </div>
 
         <button class="login-button" id="loginBtn">
@@ -53,17 +63,19 @@
     </div>
 
     <script>
-      document.getElementById("loginBtn").addEventListener("click", function () {
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+      document
+        .getElementById("loginBtn")
+        .addEventListener("click", function () {
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
 
-        if (username === "admin" && password === "admin123") {
-          alert("Login successful!");
-          window.location.href = "homepage.html"; // update this if needed
-        } else {
-          alert("Invalid username or password!");
-        }
-      });
+          if (username === "admin" && password === "admin123") {
+            alert("Login successful!");
+            window.location.href = "homepage.html"; // update this if needed
+          } else {
+            alert("Invalid username or password!");
+          }
+        });
     </script>
   </body>
 </html>

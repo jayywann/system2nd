@@ -12,7 +12,7 @@ body, html {
   /* Sidebar Styling */
   .sidebar {
     width: 240px;
-    background-color: #1e3a8a;
+    background-color: #183280;
     color: white;
     padding: 20px;
     display: flex;
@@ -51,7 +51,7 @@ body, html {
   
   /* Table Styles */
   .status-table thead tr {
-    background-color: #1e3a8a; /* Deep blue */
+    background-color: #3C65FE; /* Deep blue */
     color: white;
   }
   
@@ -65,7 +65,7 @@ body, html {
   
   .active-status {
     color: green;
-    
+
     font-weight: bold;
   }
   
