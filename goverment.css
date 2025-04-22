@@ -1,0 +1,181 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 240px;
+    background-color: #183280;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff55;
+    padding-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    
+    color: white;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .sidebar a:hover {
+    background-color: #3749b1;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f9fafb;
+
+  }
+  
+  /* Table Styles */
+  .status-table thead tr {
+    background-color: #3C65FE; /* Deep blue */
+    color: white;
+  }
+  
+  
+  .status-table th,
+  .status-table td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: left;
+  }
+  
+  .active-status {
+    color: green;
+
+    font-weight: bold;
+  }
+  
+  .inactive-status {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .evaluator-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .evaluator-btn:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Optional Footer Button */
+  .print-btn {
+    background-color: #111827;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .note-label {
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+
+
+/*here dito waaaaaah*/
+
+
+  * {
+    margin: 0px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.outer-wrapper {
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.9);
+}
+.table-wrapper {
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: fit-content;
+    max-height: 30.4vh;
+    max-width: 150.4vh;
+    margin-top: 5px;
+    margin: 15px;
+
+}
+
+
+table {
+   margin-top:60px;
+    min-width: max-content;
+    
+    border-collapse: separate;
+    border-spacing: 0px;    
+    
+}
+
+
+
+table th{ 
+    top: 0px;
+    
+    background-color: #1512b9;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    outline: 0.7px solid rgb(255, 255, 255);
+    border: 1.5px solid rgb(255, 255, 255);
+
+} 
+
+
+
+table th, table td {
+    
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+table td {
+    text-align: left;
+    
+    font-size: 15px;
+    border: 1px solid rgb(177, 177, 177);
+    padding-left: 20px;
+    
+}
