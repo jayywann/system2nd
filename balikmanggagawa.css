@@ -48,8 +48,9 @@ body, html {
     background-color: #f9fafb;
 
   }
-   /* Table Styles */
-   .status-table thead tr {
+  
+/* Table Styles */
+.status-table thead tr {
     background-color: #3C65FE; /* Deep blue */
     color: white;
   }
@@ -84,7 +85,6 @@ body, html {
   .evaluator-btn:hover {
     background-color: #1d4ed8;
   }
-  
   
   /* Optional Footer Button */
   .print-btn {
