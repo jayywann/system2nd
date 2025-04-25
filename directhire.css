@@ -1,104 +1,254 @@
+.main-content{
+  display: inline;
+  padding: 15px 0px 9px 64px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+body {
+  font-family: Poppins, sans-serif;
+  margin: 40px;
+  background-color: #f9f9f9;
+  color: #36384e;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+h2,
+h3 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+p,
+span,
+label,
+select,
+option,
+td,
+th {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.label-title {
+  font-weight: 600;
+  color: #3c65fe;
+  font-size: 12px;
+  line-height: 18px;
+}
+.dropdown-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #545f71;
+}
+.dropdown {
+  font-size: 16px;
+  font-weight: 400;
+  color: #545f71;
+  padding: 8px;
+  margin: 8px 0;
+}
+.section {
+  margin: 24px 0;
+}
+.nav-item {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: Inter, sans-serif;
+  color: #1f2633;
+  margin-right: 16px;
+}
+.sidebar-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #98a2b2;
+  font-family: Inter, sans-serif;
+}
+.print-button {
+  background-color: #3c65fe;
+  color: white;
+  font-size: 14px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+th {
+  background-color: #1e3a8a;
+  color: white;
+  font-weight: 600;
+}
+.bold-col {
+  font-weight: 500;
+  color: #101828;
+}
+.regular-col {
+  font-weight: 400;
+  color: #667085;
+}
+
+/*dito*/
+
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    min-height: 100vh;
-  }
-  
-  /* Sidebar Styling */
-  .sidebar {
-    width: 240px;
-    background-color: #183280;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .sidebar h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ffffff55;
-    padding-bottom: 10px;
-  }
-  
-  .sidebar a {
-    text-decoration: none;
-    
-    color: white;
-    font-weight: bold;
-    padding: 10px 5px;
-    border-radius: 5px;
-    transition: background-color 0.2s ease;
-  }
-  
-  .sidebar a:hover {
-    background-color: #3749b1;
-  }
-  
-  /* Main Content */
-  .main-content {
-    flex: 1;
-    padding: 30px;
-    background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-  }
-   /* Table Styles */
-   .status-table thead tr {
-    background-color: #3C65FE; /* Deep blue */
-    color: white;
-  }
-  
-  
-  .status-table th,
-  .status-table td {
-    padding: 10px;
-    border: 1px solid #ffffff;
-    text-align: left;
-  }
-  
-  .active-status {
-    color: green;
+.container {
+  display: flex;
+  min-height: 100vh;
+}
 
-    font-weight: bold;
-  }
+/* Sidebar Styling */
+.sidebar {
+  width: 240px;
+  background-color: #183280;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffffff55;
+  padding-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
   
-  .inactive-status {
-    color: red;
-    font-weight: bold;
-  }
-  
-  .evaluator-btn {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .evaluator-btn:hover {
-    background-color: #1d4ed8;
-  }
-  
-  
-  /* Optional Footer Button */
-  .print-btn {
-    background-color: #111827;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .note-label {
-    margin-top: 10px;
-    font-style: italic;
-  }
-  
+  color: white;
+  font-weight: bold;
+  padding: 10px 5px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar a:hover {
+  background-color: #3749b1;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #f9fafb;
+
+}
+
+/* Table Styles */
+.status-table thead tr {
+  background-color: #3C65FE; /* Deep blue */
+  color: white;
+}
+
+
+.status-table th{
+  border: 1px solid #183280;
+}
+.status-table td {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  text-align: center;
+}
+
+.active-status {
+  color: green;
+
+  font-weight: bold;
+}
+
+.inactive-status {
+  color: red;
+  font-weight: bold;
+}
+
+.evaluator-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.evaluator-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Optional Footer Button */
+.print-btn {
+  background-color: #111827;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.note-label {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+
+/*dito nga ni!*/
+
+body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #D9D9D9;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      padding: 6px 60px;
+      background-color: #D9D9D9;
+    }
+    header img {
+      width: 67px;
+      height: 67px;
+      margin-right: 20px;
+    }
+    .header-text {
+      color: #36384E;
+    }
+    .header-text .country {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 15px;
+      display: block;
+    }
+    .header-text .department {
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+    .main-content image{
+      width: 67px;
+      height: 67px;
+
+    }

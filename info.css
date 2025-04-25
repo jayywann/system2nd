@@ -247,3 +247,19 @@ body {
         font-weight: 500;
         line-height: 28px;
       }
+
+      /*button for Printing*/
+      .button-group button {
+        margin-right: 10px;
+        padding: 8px 16px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #0052cc;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .button-group button:hover {
+        background-color: #003d99;
+      }
