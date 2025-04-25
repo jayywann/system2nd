@@ -263,3 +263,37 @@ body {
       .button-group button:hover {
         background-color: #003d99;
       }
+
+      /*PRINT*/
+      .clearance-print-section {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .clearance-link {
+        background: #f0f0f0;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-flex;
+        align-items: center;
+      }
+      
+      .pdf-icon {
+        width: 20px;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+      
+      .print-button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+      }
+      
