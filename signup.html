@@ -26,35 +26,27 @@
       <p class="subheading">Fill in your details below</p>
 
       <!-- Input Fields with IDs -->
-      <div class="input-wrapper">
-        <i class="fas fa-user icon"></i>
-        <input type="text" id="full-name" placeholder="Full Name" class="input-field" />
-      </div>
+      <form action="signup.php" method="POST">
+        <div class="input-wrapper">
+          <input type="text" name="full_name" placeholder="Full Name" class="input-field" required />
+        </div>
+        <div class="input-wrapper">
+          <input type="email" name="email" placeholder="Email Address" class="input-field" required />
+        </div>
+        <div class="input-wrapper">
+          <input type="text" name="username" placeholder="Username" class="input-field" required />
+        </div>
+        <div class="input-wrapper">
+          <input type="password" name="password" placeholder="Password" class="input-field" required />
+        </div>
+        <div class="input-wrapper">
+          <input type="password" name="confirm_password" placeholder="Confirm Password" class="input-field" required />
+        </div>
 
-      <div class="input-wrapper">
-        <i class="fas fa-envelope icon"></i>
-        <input type="email" id="email" placeholder="Email Address" class="input-field" />
-      </div>
-
-      <div class="input-wrapper">
-        <i class="fas fa-user icon"></i>
-        <input type="text" id="username" placeholder="Username" class="input-field" />
-      </div>
-
-      <div class="input-wrapper">
-        <i class="fas fa-lock icon"></i>
-        <input type="password" id="password" placeholder="Password" class="input-field" />
-      </div>
-
-      <div class="input-wrapper">
-        <i class="fas fa-lock icon"></i>
-        <input type="password" id="confirm-password" placeholder="Confirm Password" class="input-field" />
-      </div>
-
-      <button class="login-button" id="signupBtn">
-        <span class="button-text">Sign Up</span>
-      </button>
-
+        <button type="submit" class="login-button">
+          <span class="button-text">Sign Up</span>
+        </button>
+      </form>
       <div class="signup-link">
         Already have an account?
         <a href="index.html">Log in</a>
@@ -62,28 +54,6 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById("signupBtn").addEventListener("click", function () {
-      const name = document.getElementById("full-name").value;
-      const email = document.getElementById("email").value;
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      const confirmPassword = document.getElementById("confirm-password").value;
 
-      if (!name || !email || !username || !password || !confirmPassword) {
-        alert("Please fill in all fields!");
-        return;
-      }
-
-      if (password !== confirmPassword) {
-        alert("Passwords do not match!");
-        return;
-      }
-
-      // Simulate successful signup
-      alert("Signup successful! You can now log in.");
-      window.location.href = "index.html"; // Redirect to login page
-    });
-  </script>
 </body>
 </html>

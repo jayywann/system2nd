@@ -31,29 +31,20 @@
         <h2 class="heading">LOG IN TO YOUR ACCOUNT</h2>
         <p class="subheading">Welcome Back</p>
 
-        <div class="input-wrapper">
-          <i class="fas fa-user icon"></i>
-          <input
-            type="text"
-            id="username"
-            placeholder="Username"
-            class="input-field"
-          />
-        </div>
-
-        <div class="input-wrapper">
-          <i class="fas fa-lock icon"></i>
-          <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            class="input-field"
-          />
-        </div>
-
-        <button class="login-button" id="loginBtn">
-          <span class="button-text">Login</span>
-        </button>
+        <form action="login.php" method="POST">
+          <div class="input-wrapper">
+            <input type="text" name="username" placeholder="Username" class="input-field" required />
+          </div>
+        
+          <div class="input-wrapper">
+            <input type="password" name="password" placeholder="Password" class="input-field" required />
+          </div>
+        
+          <button type="submit" class="login-button">
+            <span class="button-text">Login</span>
+          </button>
+        </form>
+        
 
         <div class="signup-link">
           Don’t have an account?
@@ -62,20 +53,6 @@
       </div>
     </div>
 
-    <script>
-      document
-        .getElementById("loginBtn")
-        .addEventListener("click", function () {
-          const username = document.getElementById("username").value;
-          const password = document.getElementById("password").value;
-
-          if (username === "admin" && password === "admin123") {
-            alert("Login successful!");
-            window.location.href = "homepage.html"; // update this if needed
-          } else {
-            alert("Invalid username or password!");
-          }
-        });
-    </script>
+    
   </body>
 </html>
