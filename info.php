@@ -2,7 +2,7 @@
 include 'connect.php';
 
 // Fetch data from the balik table
-$sql = "SELECT * FROM balik";
+$sql = "SELECT * FROM info";
 $result = $con->query($sql);
 ?>
 
@@ -11,8 +11,8 @@ $result = $con->query($sql);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Balik Manggagawa</title>
-  <link rel="stylesheet" href="balikmanggagawa.css" />
+  <title>Information Sheet</title>
+  <link rel="stylesheet" href="info.css" />
   <!-- Optional: Include Bootstrap if needed -->
  
 </head>
@@ -44,8 +44,8 @@ $result = $con->query($sql);
     <!-- Main Content -->
     <main class="main-content">
       <div style="display: flex; align-items: center;">
-        <img src="Image/balik.png" alt="Balik Manggagawa" style="width: 100px; height: auto; margin-right: 10px;">
-        <span style="font-size: 50px; font-weight: bold;">Balik-Manggagawa</span>
+        <img src="Image/info.png" alt="Information Sheet" style="width: 100px; height: auto; margin-right: 10px;">
+        <span style="font-size: 50px; font-weight: bold;">Information Sheet</span>
       </div>
 
       <section class="requirement-section">
@@ -102,8 +102,8 @@ $result = $con->query($sql);
                   echo "<td>" . htmlspecialchars($row['total_pc2']) . "</td>";
                   echo "<td>
                           <div class='btn-group' role='group'>
-                            <a href='updatebalik.php?id=" . $row['id'] . "' class='btn btn-primary btn-sm mr-1'>Update</a>
-                            <a href='deletebalik.php?id=" . $row['id'] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure?\");'>Delete</a>
+                            <a href='updateinfo.php?id=" . $row['id'] . "' class='btn btn-primary btn-sm mr-1'>Update</a>
+                            <a href='deleteinfo.php?id=" . $row['id'] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure?\");'>Delete</a>
                           </div>
                         </td>";
                   echo "</tr>";
@@ -119,37 +119,10 @@ $result = $con->query($sql);
 
       <!-- Add User Button -->
       <div style="margin-top: 20px;">
-        <a href="userbalik.php" class="btn btn-primary">Add User</a>
+        <a href="userinfo.php" class="btn btn-primary">Add User</a>
       </div>
 
-      <!-- Clearance Buttons -->
-      <div class="clearance-print-section">
-        <a href="Image/CRITICAL SKILLS.docx.pdf" target="_blank" class="clearance-link">
-        <img src="Image/PDF.png" alt="PDF" class="pdf-icon" style="width: 20px; margin-right: 5px;"> Clearance
-        </a>
-        <a href="File/CRITICAL SKILLS.docx.pdf" target="_blank">
-          <button class="print-button">Print</button>
-        </a>
-      </div>
-
-      <?php
-      $titles = [
-        "Watch listed employer\\company",
-        "Non-complaint country",
-        "For Assessment country",
-        "Seafarers position",
-        "Critical Skill"
-      ];
-      foreach ($titles as $title) {
-        echo '
-        <div class="clearance-print-section">
-          <a href="clearance.pdf" target="_blank" class="clearance-link">
-            <img src="Image/PDF.png" alt="PDF" class="pdf-icon" style="width: 20px; margin-right: 5px;">' . $title . '
-          </a>
-          <button onclick="window.print()" class="print-button">Print</button>
-        </div>';
-      }
-      ?>
+      
     </main>
   </div>
 </body>
