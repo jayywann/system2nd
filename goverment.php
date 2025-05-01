@@ -2,7 +2,7 @@
 include 'connect.php'; // your database connection
 
 // Fetch data from the table (e.g., balikmanggagawa table)
-$sql = "SELECT * FROM direct"; // use your correct table name
+$sql = "SELECT * FROM govtogov"; // use your correct table name
 $result = $con->query($sql);
 ?>
 
@@ -12,7 +12,7 @@ $result = $con->query($sql);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Direct Hire</title>
+  <title>Government To Government</title>
   <link rel="stylesheet" href="info.css" />
 
 </head>
@@ -35,7 +35,7 @@ $result = $con->query($sql);
       <a href="homepage.html">Home</a>
       <a href="directhire.php">Direct Hire</a>
       <a href="balikmanggagawa.html">Balik-Manggagawa</a>
-      <a href="goverment.html">Government to Government</a>
+      <a href="goverment.php">Government to Government</a>
       <a href="info.html">Information Sheet</a>
       <a href="job.html">Job Fair</a>
       <h1> </h1>
@@ -52,8 +52,8 @@ $result = $con->query($sql);
     <!-- Main Content -->
     <main class="main-content">
       <div style="display: flex; align-items: center;">
-        <img src="Image/direct.png" alt="DMW Logo" style="width: 100px; height: auto; margin-right: 10px;">
-        <span style="font-size: 50px; font-weight: bold;">Direct Hire</span>
+        <img src="Image/government.png" alt="DMW Logo" style="width: 100px; height: auto; margin-right: 10px;">
+        <span style="font-size: 50px; font-weight: bold;">Government To Government</span>
       </div>
 
       <section class="requirement-section">
@@ -111,8 +111,8 @@ $result = $con->query($sql);
       </section>
       <div style="position; bottom: 250px; right: 215  px;">
         <button class="btn btn-primary">
-          <a href="user.php" class="text-light text-decoration-none">Add User</a>
-        </button>
+          <a href="usergtg.php" class="text-light text-decoration-none">Add User</a>
+        </button> 
       </div>
   </div>
 
@@ -122,51 +122,14 @@ $result = $con->query($sql);
   ?>
 
   <div class="clearance-print-section">
-    <a href="File/CLEARANCE.docx.pdf" target="_blank" class="clearance-link">
-      <img src="Image/PDF.png" alt="PDF" class="pdf-icon">
-      Clearance
-    </a>
-
-    <a href="File/CLEARANCE.docx.pdf" target="_blank">
-      <button class="print-button">Print</button>
-    </a>
-  </div>
-
-  <div class="clearance-print-section">
     <a href="clearance.pdf" target="_blank" class="clearance-link">
       <img src="Image/PDF.png" alt="PDF" class="pdf-icon">
-      Memorandum
+      Endorsment Letter
     </a>
     <button onclick="window.print()" class="print-button">
       Print
     </button>
   </div>
-  <div class="clearance-print-section">
-    <a href="Image/CRITICAL SKILLS.docx.pdf" target="_blank" class="clearance-link">
-      <img src="Image/PDF.png" alt="PDF" class="pdf-icon">
-      Migrant Workers Office/ Philippines Embassy/ Philippines Consulate Confirmation
-    </a>
-    <button onclick="window.print()" class="print-button">
-      Print
-    </button>
-  </div>
-  <div class="clearance-print-section">
-    <a href="clearance.pdf" target="_blank" class="clearance-link">
-      <img src="Image/PDF.png" alt="PDF" class="pdf-icon">
-      Checklist of Requirements
-    </a>
-    <button onclick="window.print()" class="print-button">
-      Print
-    </button>
-  </div>
-  <div class="clearance-print-section">
-    <a href="clearance.pdf" target="_blank" class="clearance-link">
-      <img src="Image/PDF.png" alt="PDF" class="pdf-icon">
-      Screenshots (principal /email of migrant workers/Consulate)
-    </a>
-    <button onclick="window.print()" class="print-button">
-      Print
-    </button>
   </div>
   </main>
   </div>
