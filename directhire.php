@@ -32,7 +32,7 @@ $result = $con->query($sql);
       <h2>DMW System</h2>
       <a href="homepage.html">Home</a>
       <a href="directhire.php">Direct Hire</a>
-      <a href="balikmanggagawa.html">Balik-Manggagawa</a>
+      <a href="balikmanggagawa.php">Balik-Manggagawa</a>
       <a href="goverment.php">Government to Government</a>
       <a href="info.html">Information Sheet</a>
       <a href="job.html">Job Fair</a>

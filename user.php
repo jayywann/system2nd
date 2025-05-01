@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     $Note = $_POST['Note'];
 
     // Prepare the SQL statement
-    $stmt = $con->prepare("INSERT INTO direct (Name, Jobsite, Evaluated, Confirmation, Email, Recieved, Evaluator, Note) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $con->prepare("INSERT INTO balik (Name, Jobsite, Evaluated, Confirmation, Email, Recieved, Evaluator, Note) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 
     // Bind parameters
     $stmt->bind_param("ssssssss", $Name, $Jobsite, $Evaluated, $Confirmation, $Email, $Recieved, $Evaluator, $Note);
