@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 
     // Prepare the SQL statement
     $stmt = $con->prepare("INSERT INTO direct (Name, Jobsite, Evaluated, Confirmation, Email, Recieved, Evaluator, Note) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    
+
     // Bind parameters
     $stmt->bind_param("ssssssss", $Name, $Jobsite, $Evaluated, $Confirmation, $Email, $Recieved, $Evaluator, $Note);
 
@@ -63,12 +63,14 @@ $con->close();
 
             <div class="form-group">
                 <label>Evaluated</label>
-                <input type="text" class="form-control" placeholder="Enter Evaluated" name="Evaluated" autocomplete="off">
+                <input type="text" class="form-control" placeholder="Enter Evaluated" name="Evaluated"
+                    autocomplete="off">
             </div>
 
             <div class="form-group">
                 <label>Confirmation</label>
-                <input type="text" class="form-control" placeholder="Enter Confirmation" name="Confirmation" autocomplete="off">
+                <input type="text" class="form-control" placeholder="Enter Confirmation" name="Confirmation"
+                    autocomplete="off">
             </div>
 
             <div class="form-group">
@@ -83,7 +85,8 @@ $con->close();
 
             <div class="form-group">
                 <label>Evaluator</label>
-                <input type="text" class="form-control" placeholder="Enter Evaluator" name="Evaluator" autocomplete="off">
+                <input type="text" class="form-control" placeholder="Enter Evaluator" name="Evaluator"
+                    autocomplete="off">
             </div>
 
             <div class="form-group">
@@ -92,8 +95,8 @@ $con->close();
             </div>
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
             <button class="btn btn-secondary">
-            <a href="directhire.php" class="text-light text-decoration-none">Cancel</a>
-        </button>
+                <a href="directhire.php" class="text-light text-decoration-none">Cancel</a>
+            </button>
         </form>
     </div>
 </body>
