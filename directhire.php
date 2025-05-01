@@ -1,3 +1,11 @@
+<?php
+include 'connect.php'; // your database connection
+
+// Fetch data from the table (e.g., balikmanggagawa table)
+$sql = "SELECT * FROM direct"; // use your correct table name
+$result = $con->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,69 +58,66 @@
         </section>
 
         <section class="table-section">
-          <div class="table-wrapper">
-            <table class="status-table">
-              <thead>
+        <div class="table-container">
+        <table class="table">
+            <thead>
                 <tr>
-                  <th>No.</th>
-                  <th>Control no.</th>
-                  <th>Name</th>
-                  <th>Jobsite</th>
-                  <th>Evaluated</th>
-                  <th>For Confirmation (MWO/PE/PCS)</th>
-                  <th>Email to DHAD</th>
-                  <th>Evaluator</th>
-                  <th>Note</th>
+                    <th scope="col">No.</th>
+                    <th scope="col">Control no.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Jobsite</th>
+                    <th scope="col">Evaluated</th>
+                    <th scope="col">For Confirmation (MWO/PE/PCS)</th>
+                    <th scope="col">Email to DHAD</th>
+                    <th scope="col">Evaluator</th>
+                    <th scope="col">Note</th>
+                    <th scope="col">Actions</th> <!-- New column for actions -->
                 </tr>
-              </thead>
-              <tbody>
-                <!-- Sample Data Rows -->
-                <tr>
-                  <td>Value 1</td>
-                  <td>Value 2</td>
-                  <td>Value 3</td>
-                  <td>Value 4</td>
-                  <td>Value 5</td>
-                  <td>Value 6</td>
-                  <td>Value 7</td>
-                  <td>Value 8</td>
-                  <td>Value 9</td>>
-                </tr>
-                <!-- Repeat the above <tr> as needed -->
-              </tbody>
-              <tbody>
-                <!-- Sample Data Rows -->
-                <tr>
-                  <td>Value 1</td>
-                  <td>Value 2</td>
-                  <td>Value 3</td>
-                  <td>Value 4</td>
-                  <td>Value 5</td>
-                  <td>Value 6</td>
-                  <td>Value 7</td>
-                  <td>Value 8</td>
-                  <td>Value 9</td>>
-                </tr>
-                <!-- Repeat the above <tr> as needed -->
-              </tbody>
-              <tbody>
-                <!-- Sample Data Rows -->
-                <tr>
-                  <td>Value 1</td>
-                  <td>Value 2</td>
-                  <td>Value 3</td>
-                  <td>Value 4</td>
-                  <td>Value 5</td>
-                  <td>Value 6</td>
-                  <td>Value 7</td>
-                  <td>Value 8</td>
-                  <td>Value 9</td>>
-                </tr>
-                <!-- Repeat the above <tr> as needed -->
-              </tbody>
-            </table>
-          </div>
+            </thead>
+            <tbody>
+                <?php
+                // Check if there are results
+                if ($result->num_rows > 0) {
+                    // Output data of each row
+                    $no = 1; // Initialize a counter for the "No." column
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<th scope='row'>" . $no++ . "</th>"; // Increment the counter
+                        echo "<td>" . htmlspecialchars($row['Control']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['Name']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['Jobsite']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['Evaluated']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['Confirmation']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['Email']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['Evaluator']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['Note']) . "</td>";
+                        echo "<td>
+                                <div class='btn-group' role='group'>
+                                    <a href='update.php?id=" . $row['id'] . "' class='btn btn-primary btn-sm mr-2'>Update</a>
+                                    <a href='delete.php?id=" . $row['id'] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this record?\");'>Delete</a>
+                                </div>
+                              </td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='10'>No records found</td></tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
         </section>
+        <div style="position; bottom: 250px; right: 215  px;">
+        <button class="btn btn-primary">
+            <a href="user.php" class="text-light text-decoration-none">Add User</a>
+        </button>
+    </div>
+</div>
+
+<?php
+// Close the database connection
+$con->close();
+?>
 
         <div class="clearance-print-section">
           <a href="File/CLEARANCE.docx.pdf" target="_blank" class="clearance-link">

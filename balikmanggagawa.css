@@ -199,6 +199,7 @@ body, html {
 }
 
 /* Optional Footer Button */
+
 .print-btn {
   background-color: #111827;
   color: white;
@@ -247,3 +248,5 @@ body {
       font-weight: 500;
       line-height: 28px;
     }
+
+    
