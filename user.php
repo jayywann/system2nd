@@ -91,7 +91,7 @@ $con->close();
                 <input type="text" class="form-control" placeholder="Enter Note" name="Note" autocomplete="off">
             </div>
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-            <button class="btn btn-primary">
+            <button class="btn btn-secondary">
             <a href="directhire.php" class="text-light text-decoration-none">Cancel</a>
         </button>
         </form>
