@@ -1,33 +1,29 @@
 <?php
 include 'connect.php'; // your database connection
 
-// Fetch data from the table (e.g., balikmanggagawa table)
-$sql = "SELECT * FROM govtogov"; // use your correct table name
+// Fetch data from the govtogov table
+$sql = "SELECT * FROM govtogov";
 $result = $con->query($sql);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Government To Government</title>
-  <link rel="stylesheet" href="info.css" />
-
+  <link rel="stylesheet" href="goverment.css" />
 </head>
 
-</script>
-
-<header>
-  <img src="Image/DMW.png" alt="DMW Logo">
-  <div class="header-text">
-    <span class="country">Republic of the Philippines</span>
-    <span class="department">Department of Migrant Workers</span>
-  </div>
-</header>
-
 <body>
+  <header>
+    <img src="Image/DMW.png" alt="DMW Logo">
+    <div class="header-text">
+      <span class="country">Republic of the Philippines</span>
+      <span class="department">Department of Migrant Workers</span>
+    </div>
+  </header>
+
   <div class="container">
     <!-- Sidebar -->
     <nav class="sidebar">
@@ -38,53 +34,42 @@ $result = $con->query($sql);
       <a href="goverment.php">Government to Government</a>
       <a href="info.html">Information Sheet</a>
       <a href="job.html">Job Fair</a>
-      <h1> </h1>
-      <h1> </h1>
-      <h1> </h1>
-      <h1> </h1>
-      <h1> </h1>
-      <h1> </h1>
+      <div style="flex-grow: 1;"></div>
       <a href="#">Settings</a>
       <a href="logout.php">Logout</a>
-
     </nav>
 
     <!-- Main Content -->
     <main class="main-content">
-      <div style="display: flex; align-items: center;">
+      <div style="display: flex; align-items: center; margin-bottom: 20px;">
         <img src="Image/government.png" alt="DMW Logo" style="width: 100px; height: auto; margin-right: 10px;">
         <span style="font-size: 50px; font-weight: bold;">Government To Government</span>
       </div>
-
-      <section class="requirement-section">
-      </section>
 
       <section class="table-section">
         <div class="table-container">
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">No.</th>
-                <th scope="col">Control no.</th>
-                <th scope="col">Name</th>
-                <th scope="col">Jobsite</th>
-                <th scope="col">Evaluated</th>
-                <th scope="col">For Confirmation (MWO/PE/PCS)</th>
-                <th scope="col">Email to DHAD</th>
-                <th scope="col">Evaluator</th>
-                <th scope="col">Note</th>
-                <th scope="col">Actions</th> <!-- New column for actions -->
+                <th>No.</th>
+                <th>Control no.</th>
+                <th>Name</th>
+                <th>Jobsite</th>
+                <th>Evaluated</th>
+                <th>For Confirmation (MWO/PE/PCS)</th>
+                <th>Email to DHAD</th>
+                <th>Evaluator</th>
+                <th>Note</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               <?php
-              // Check if there are results
               if ($result->num_rows > 0) {
-                // Output data of each row
-                $no = 1; // Initialize a counter for the "No." column
+                $no = 1;
                 while ($row = $result->fetch_assoc()) {
                   echo "<tr>";
-                  echo "<th scope='row'>" . $no++ . "</th>"; // Increment the counter
+                  echo "<td>" . $no++ . "</td>";
                   echo "<td>" . htmlspecialchars($row['Control']) . "</td>";
                   echo "<td>" . htmlspecialchars($row['Name']) . "</td>";
                   echo "<td>" . htmlspecialchars($row['Jobsite']) . "</td>";
@@ -94,11 +79,9 @@ $result = $con->query($sql);
                   echo "<td>" . htmlspecialchars($row['Evaluator']) . "</td>";
                   echo "<td>" . htmlspecialchars($row['Note']) . "</td>";
                   echo "<td>
-                                <div class='btn-group' role='group'>
-                                    <a href='update.php?id=" . $row['id'] . "' class='btn btn-primary btn-sm mr-2'>Update</a>
-                                    <a href='delete.php?id=" . $row['id'] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this record?\");'>Delete</a>
-                                </div>
-                              </td>";
+                          <a href='update.php?id=" . $row['id'] . "' class='btn btn-primary btn-sm'>Update</a>
+                          <a href='delete.php?id=" . $row['id'] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this record?\");'>Delete</a>
+                        </td>";
                   echo "</tr>";
                 }
               } else {
@@ -109,30 +92,22 @@ $result = $con->query($sql);
           </table>
         </div>
       </section>
-      <div style="position; bottom: 250px; right: 215  px;">
-        <button class="btn btn-primary">
-          <a href="usergtg.php" class="text-light text-decoration-none">Add User</a>
-        </button> 
+
+      <!-- Add User Button -->
+      <div style="margin-top: 20px;">
+        <a href="usergtg.php" class="btn btn-success">Add User</a>
       </div>
+
+      <!-- PDF and Print Section -->
+      <div class="clearance-print-section" style="margin-top: 30px;">
+        <a href="clearance.pdf" target="_blank" class="btn btn-outline-secondary">
+          <img src="Image/PDF.png" alt="PDF" style="height: 20px; margin-right: 5px;"> Endorsement Letter
+        </a>
+        <button onclick="window.print()" class="btn btn-secondary">Print</button>
+      </div>
+    </main>
   </div>
 
-  <?php
-  // Close the database connection
-  $con->close();
-  ?>
-
-  <div class="clearance-print-section">
-    <a href="clearance.pdf" target="_blank" class="clearance-link">
-      <img src="Image/PDF.png" alt="PDF" class="pdf-icon">
-      Endorsment Letter
-    </a>
-    <button onclick="window.print()" class="print-button">
-      Print
-    </button>
-  </div>
-  </div>
-  </main>
-  </div>
+  <?php $con->close(); ?>
 </body>
-
 </html>

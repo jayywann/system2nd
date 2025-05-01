@@ -117,7 +117,7 @@ $con->close();
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
             <a href="goverment.php" class="btn btn-secondary">Cancel</a>
-        </form>
+        </form> 
     </div>
 
 </body>
